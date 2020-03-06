@@ -26,7 +26,7 @@ a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    background: #00274C;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -305,5 +305,4 @@ table.table td i {
     color : #17a2b8;
     font-weight: bold;
 }
-
 

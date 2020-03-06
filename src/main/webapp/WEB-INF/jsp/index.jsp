@@ -38,158 +38,139 @@
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Search Categories</h3>
+            <h3>Registration Filters</h3>
         </div>
         <ul class="list-unstyled components">
             <!--p>Dummy Heading</p-->
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Target of Refactoring</a>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Term</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="code" class="homeSubmenu0" >Code</a>
+                        <a href="code" class="homeSubmenu0" >Summer 2020</a>
                     </li>
                     <li>
-                        <a href="Architecture" class="homeSubmenu0" >Architecture</a>
+                        <a href="Architecture" class="homeSubmenu0" >Winter 2020</a>
                     </li>
                     <li>
-                        <a href="UI"  class="homeSubmenu0" >UI</a>
+                        <a href="UI"  class="homeSubmenu0" >Fall 2020</a>
                     </li>
                     <li>
-                        <a href="Model"  class="homeSubmenu0" >Model</a>
+                        <a href="Model"  class="homeSubmenu0" >Summer 2019</a>
                     </li>
                     <li>
-                        <a href="Database"  class="homeSubmenu0" >Database</a>
+                        <a href="Database"  class="homeSubmenu0" >Winter 2019</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Refactoring Life Cycle</a>
+                <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Subject</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu1">
                     <li>
-                        <a href="Recommendation" class="homeSubmenu0" >Recommendation</a>
+                        <a href="Recommendation" class="homeSubmenu0" >Human-Centered Design&Eng</a>
                     </li>
                     <li>
-                        <a href="Detection" class="homeSubmenu0" >Detection</a>
+                        <a href="Detection" class="homeSubmenu0" >Humanities</a>
                     </li>
                     <li>
-                        <a href="Testing"  class="homeSubmenu0" >Testing</a>
+                        <a href="Testing"  class="homeSubmenu0" >Indus&Manifa Sys Eng</a>
                     </li>
                     <li>
-                        <a href="Automation"  class="homeSubmenu0" >Automation</a>
+                        <a href="Automation"  class="homeSubmenu0" >Information Sys Eng</a>
                     </li>
                     <li>
-                        <a href="Prioritization"  class="homeSubmenu0" >Prioritization</a>
+                        <a href="Prioritization"  class="homeSubmenu0" >Information Sys Mgr</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Programming Languages</a>
+                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Course Number</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu2">
                     <li>
-                        <a href="Java" class="homeSubmenu0" >Java</a>
+                        <a href="Java" class="homeSubmenu0" >5715</a>
                     </li>
                     <li>
-                        <a href="C/C++" class="homeSubmenu0" >C/C++</a>
+                        <a href="C/C++" class="homeSubmenu0" >577</a>
                     </li>
                     <li>
-                        <a href="C#"  class="homeSubmenu0" >C#</a>
+                        <a href="C#"  class="homeSubmenu0" >580</a>
                     </li>
                     <li>
-                        <a href="Python"  class="homeSubmenu0" >Python</a>
+                        <a href="Python"  class="homeSubmenu0" >566</a>
                     </li>
                     <li>
-                        <a href="PHP"  class="homeSubmenu0" >PHP</a>
+                        <a href="PHP"  class="homeSubmenu0" >580</a>
                     </li>
-                    <li>
-                        <a href="COBOL"  class="homeSubmenu0" >COBOL</a>
-                    </li>
-                    <li>
-                        <a href="CSS"  class="homeSubmenu0" >CSS</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Refactoring Objectives</a>
+                <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Instructor</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu3">
                     <li>
-                        <a href="External Quality" class="homeSubmenu0" >External Quality</a>
+                        <a href="External Quality" class="homeSubmenu0" >Sang-Hwan, Kim</a>
                     </li>
                     <li>
-                        <a href="Internal Quality" class="homeSubmenu0" >Internal Quality</a>
+                        <a href="Internal Quality" class="homeSubmenu0" >Zhiwei, Xu</a>
                     </li>
                     <li>
-                        <a href="Performance/Parallelism"  class="homeSubmenu0" >Performance/Parallelism</a>
+                        <a href="Performance/Parallelism"  class="homeSubmenu0" >Heezy, Does it</a>
                     </li>
                     <li>
-                        <a href="Migration"  class="homeSubmenu0" >Migration</a>
+                        <a href="Migration"  class="homeSubmenu0" >Paul, Richardson</a>
                     </li>
                     <li>
-                        <a href="Security"  class="homeSubmenu0" >Security</a>
+                        <a href="Security"  class="homeSubmenu0" >Armen, Zakarian</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Refactoring Evaluation</a>
+                <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Meeting Day</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu4">
                     <li>
-                        <a href="Industrial" class="homeSubmenu0" >Industrial</a>
+                        <a href="Industrial" class="homeSubmenu0" >Monday</a>
                     </li>
                     <li>
-                        <a href="Open Source" class="homeSubmenu0" >Open Source</a>
+                        <a href="Open Source" class="homeSubmenu0" >Tuesday</a>
+                    </li>
+                    <li>
+                        <a href="Industrial" class="homeSubmenu0" >Wednesday</a>
+                    </li>
+                    <li>
+                        <a href="Open Source" class="homeSubmenu0" >Thursday</a>
+                    </li>
+                    <li>
+                        <a href="Industrial" class="homeSubmenu0" >Friday</a>
+                    </li>
+                    <li>
+                        <a href="Open Source" class="homeSubmenu0" >Web/Online</a>
                     </li>
                 </ul>
             </li>
 
             <li>
-                <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Fields</a>
+                <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Advanced</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu5">
                     <li>
-                        <a href="Data mining" class="homeSubmenu0" >Data mining</a>
+                        <a href="Data mining" class="homeSubmenu0" >Open Sections</a>
                     </li>
                     <li>
-                        <a href="Search base<" class="homeSubmenu0" >Search base</a>
+                        <a href="Search base<" class="homeSubmenu0" >No Prerequisites</a>
                     </li>
                     <li>
-                        <a href="Formal methods" class="homeSubmenu0" >Formal methods</a>
+                        <a href="Formal methods" class="homeSubmenu0" >Web Only</a>
                     </li>
                     <li>
-                        <a href="Fuzzy logic" class="homeSubmenu0" >Fuzzy logic</a>
+                        <a href="Fuzzy logic" class="homeSubmenu0" >Evening Only</a>
                     </li>
                 </ul>
             </li>
-
-
-            <li>
-                <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Applied Paradigm</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu6">
-                    <li>
-                        <a href="OO Design" class="homeSubmenu0" >OO Design</a>
-                    </li>
-                    <li>
-                        <a href="Web service/Cloud" class="homeSubmenu0" >Web service/Cloud</a>
-                    </li>
-                    <li>
-                        <a href="Mobile Aps" class="homeSubmenu0" >Mobile Aps</a>
-                    </li>
-                    <li>
-                        <a href="Model Driven" class="homeSubmenu0" >Model Driven</a>
-                    </li>
-                    <li>
-                        <a href="Aspect Oriented" class="homeSubmenu0" >Aspect Oriented</a>
-                    </li>
-                    <li>
-                        <a href="Software Documentation" class="homeSubmenu0" >Software Documentation</a>
-                    </li>
-                </ul>
-            </li>
-
         </ul>
     </nav>
 
     <!-- Page Content  -->
     <div id="content">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light text-white">
             <div class="container-fluid">
 
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -199,38 +180,10 @@
                 <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-align-justify"></i>
                 </button>
-            </div>
-        </nav>
-
-        <!-- Search section -->
-        <section class="search-sec">
-            <div class="container">
-                <form action="#" method="post" novalidate="novalidate">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                    <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                        <option>Select search criteria</option>
-                                        <option>Name</option>
-                                        <option>Journal</option>
-                                        <option>Category</option>
-                                        <option>Title</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-6 col-md-3 col-sm-12 p-0">
-                                    <input type="text" id="tags" class="form-control search-slt" data-role="tagsinput"/>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                    <button type="button" name="search" class="btn btn-warning search-slt2" id="search">Search</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
                 <br/>
             </div>
-        </section>
+        </nav>
         <!--End of search section-->
         <div class="line"></div>
         <!-- Table start-->
@@ -257,18 +210,20 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <h2 class="text-center">Publication Details</h2>
+                        <h2 class="text-center">Browse Courses</h2>
                     </div>
                 </div>
             </div>
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Authors Name </th>
-                    <th>Article Title</th>
-                    <th>Publication year</th>
-                    <th>Tags</th>
+                    <th>Course Number</th>
+                    <th>Title</th>
+                    <th>Subject Description</th>
+                    <th>Professor</th>
+                    <th>Meeting Time</th>
+                    <th>Available seats</th>
+                    <th>Add/Remove</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -278,11 +233,9 @@
                     <td>89 Chiaroscuro Rd.</td>
                     <td>Portland</td>
                     <td>USA</td>
+
                     <td>
-                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                class="material-icons">&#xE872;</i></a>
+                        <div class="icon-preview"><i class="material-icons md-24">add_box</i></div>
                     </td>
                 </tr>
                 <tr>
@@ -461,7 +414,328 @@
         <!-- END GRAPH AND MAP-->
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    });
+</script>
 </body>
+
+
+<!-- Content for Popover #1 -->
+<div class="hidden" id="a1">
+    <div class="popover-heading" id="title"></div>
+    <div class="popover-body">
+        <div class="abstract"></div>
+        <div class="keywords"></div>
+    </div>
+</div>
+
 </html>
 
+
+<script>
+    $(document).ready(function () {
+        console.log("********************************");
+
+        $("#search").submit(function (event) {
+
+//stop submit the form, we will post it manually.
+            event.preventDefault();
+
+            fire_ajax_submit();
+
+        });
+
+    });
+
+    function fire_ajax_submit(search) {
+
+        $("#btn-search").prop("disabled", true);
+        console.log("***********************************");
+        console.log("Begore AJAX"+search);
+        jQuery.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/api/search",
+            data: JSON.stringify(search),
+            dataType: 'json',
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+
+                $('#total_records').text(data.length);
+                var html = '';
+                if (data.length > 0) {
+
+                    for (var count = 0; count < data.length; count++) {
+                        var RefactoringLifeCycle = "";
+                        var TargetOfRefactoring = "";
+                        var ProgrammingLanguages = "";
+                        var RefactoringEvaluation = "";
+                        var RefactoringObjectives = "";
+                        var Fields="";
+                        var AppliedParadigm="";
+
+                        var tags = JSON.stringify(data[count].listOfTages);
+                        var obj = JSON.parse(tags);
+                        var refLife1 = obj.RefactoringLifeCycle;
+                        var refLife2 = refLife1.join(",");
+                        if (refLife2) {
+                            RefactoringLifeCycle = "Refactoring Life Cycle ::: " + refLife2;
+                        }
+
+                        var targetRef1 = obj.TargetOfRefactoring;
+                        var targetRef2 = targetRef1.join(",");
+                        if (targetRef2) {
+                            TargetOfRefactoring = "Target Of Refactoring ::: " + targetRef2;
+                        }
+
+                        var progLang1 = obj.ProgrammingLanguages;
+                        var progLang2 = progLang1.join(",");
+                        if (progLang2) {
+                            ProgrammingLanguages = "Programming Languages ::: " + progLang2;
+                        }
+
+                        var progEvolu1 = obj.RefactoringEvaluation;
+                        var progEvolu2 = progEvolu1.join(",");
+                        if (progEvolu2) {
+                            RefactoringEvaluation = "RefactoringEvaluation ::: " + progEvolu2;
+                        }
+                        var progobject1 = obj.RefactoringObjectives;
+                        var progobject2 = progobject1.join(",");
+                        if (progobject2) {
+                            RefactoringObjectives = "RefactoringObjectives ::: " + progobject2;
+                        }
+
+                        var fields1 = obj.Fields;
+                        var fields2 = fields1.join(",");
+                        if (fields2) {
+                            Fields = "Fields ::: " + fields2;
+                        }
+
+                        var appliedpa1 = obj.AppliedParadigm;
+                        var appliedpa2 = appliedpa1.join(",");
+                        if (appliedpa2) {
+                            AppliedParadigm = "AppliedParadigm ::: " + appliedpa2;
+                        }
+
+
+                        var abstractVal = count + 1;
+                        html += '<tr>';
+                        // html += '<td><button class="btn btn-danger btn-xs" id="SaveChangesBtn" type="button" data-toggle="popover" data-title="Custom Title" data-trigger="manual" data-content="&lt;div&gt;This is your div content&lt;/div&gt;"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>'+abstractVal+'</button></td>';
+                        html += '<td>' + '<a href="' + data[count].bbstract + '" data-title="' + data[count].title + '"  id="' + refLife2 + " " + targetRef2 + " " + progEvolu2 + " " + progobject2 + " "+progLang2+" "+fields2+ " "+appliedpa2+'"  lang="'+data[count].authors+'" type="button" class="popoverButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="popoverNumber">' + abstractVal + '<span></a></td>';
+                        html += '<td>' + data[count].authors + '</td>';
+                        html += '<td>' + data[count].title + '</td>';
+                        html += '<td>' + data[count].year + '</td>';
+                        html += '<td id="a" >' +
+                            '<span class="hideKeyWords text-nowrap text-info text-nowrap">' + refLife2 + '&nbsp;<br></span>' +
+                            '<span class="hideKeyWords1 text-nowrap text-warning text-nowrap">' + targetRef2 + '&nbsp;<br></span>' +
+                            '<span class="hideKeyWords2 text-nowrap text-primary text-nowrap">'+progEvolu2+'&nbsp;<br></span>' +
+                            '<span class="hideKeyWords3 text-nowrap text-success text-nowrap">'+progobject2+'&nbsp;<br></span>' +
+                            '<span class="hideKeyWords4 text-nowrap text-danger text-nowrap">' + progLang2 + '&nbsp;<br></span>' +
+                            '<span class="hideKeyWords4 text-nowrap text-secondary text-nowrap">' + fields2 + '&nbsp;<br></span>' +
+                            '<span class="hideKeyWords4 text-nowrap text-dark text-nowrap">' + appliedpa2 + '&nbsp;</span>' +
+                            '</td></tr>';
+
+                    }
+
+                    jQuery.getScript("css/js/pubPerYearGraph.js").done(function () {
+                        console.log("yay, all good, do something *");
+                        drawBarChart(data[0].publicationsPerYear);
+                    }).fail(function () {
+                        console.log("boo first chart failed , fall back to something else");
+                    });
+
+                    jQuery.getScript("css/js/tagPie.js").done(function () {
+                        console.log("yay, all good, do something *");
+                        drawPieChart(data[0].publicationsPerCategory);
+                    }).fail(function () {
+                        console.log("boo first chart failed , fall back to something else");
+                    });
+
+                    jQuery.getScript("css/js/maps.js").done(function () {
+                        console.log("yay, we got the map *");
+                        drawRegionsMap(data[0].publicationsMaps);
+                    }).fail(function () {
+                        console.log("boo first chart failed , fall back to something else");
+                    });
+
+                    jQuery.getScript("css/js/countryPerPublication.js").done(function () {
+                        console.log("yay, we got the country per pub *");
+                        drawPublicationPerCountryChart(data[0].publicationsMaps);
+                    }).fail(function () {
+                        console.log("boo first chart failed , fall back to something else");
+                    });
+
+                } else {
+                    html = '<tr><td colspan="5">No Data Found</td></tr>';
+                }
+                $('tbody').html(html);
+
+                //will clear all the empty DIVs with the following classes
+                (function ($) {
+                    $(document).ready(function(){
+                        console.log( 'Before: ', $('div') );
+                        $('.hideKeyWords, .hideKeyWords1, .hideKeyWords2, .hideKeyWords3,.hideKeyWords4').filter(function() {
+                            return $.trim($(this).text()) === '';
+                        }).remove();
+                        console.log( 'After: %%%%%%%%%%%%%%%%%', $('div') );
+                    });
+                })(jQuery);
+
+                //get the number of pages to display
+                var numerOfRecords = $( "#myselect option:selected" ).text();
+                //show only certain number
+                $("table > tbody > tr").hide().slice(0, numerOfRecords).show();
+            },
+            error: function (e) {
+
+                var json = "<h4>Ajax Response</h4><pre>"
+                    + e.responseText + "</pre>";
+                $('#feedback').html(json);
+
+                console.log("ERROR : ", e);
+                $("#btn-search").prop("disabled", false);
+
+            }
+        });
+
+    }
+
+    $('#search').click(function () {
+        var search = {};
+        search["search"] = $("#exampleFormControlSelect1").val();
+        search["authorName"] = $('#tags').val();
+        fire_ajax_submit(search);
+    });
+
+    //test
+
+    $(document).on("click", '.popoverButton', function(evt){
+
+        evt.preventDefault();
+        /*
+        * <div class="hidden" id="a1">
+          <div class="popover-heading" id="title">
+              This is the heading for #1
+          </div>
+
+          <div class="popover-body">
+              <div id="abstract">This is the body for #1</div>
+              <div class="text-danger" id="keywords">This is the heading for #2</div>
+          </div>
+      </div>
+        * */
+        //.empty()alert("Hello");
+
+        //var clicked_button = $(this);
+        //var abstract = clicked_button.attr("href");
+        //var title = clicked_button.attr("data-title");
+//'<button class="btn btn-success cancel pull-right">Close</button>'
+        $('div.popover-heading').empty();
+        $('div.abstract').empty();
+        $('div.keywords').empty();
+        $('div.popover-heading').append('<span class="close pull-right" data-dismiss="popover-x">&times;</span>');
+        $('div.popover-heading').append('<h6> <span class="popoverBox">Title : </span>'+$(this).attr("data-title")+"<h6>");
+        $('div.abstract').append('<span class="popoverBox">Abstract : </span>'+$(this).attr("href"));
+
+        //add space
+        $('div.abstract').append("</p>");
+        //authors
+        var authors = $(this).attr("lang");
+        $('div.abstract').append('<span class="popoverBox">Authors : </span>'+authors);
+
+        //keywords
+        var keywords = $(this).attr("id");
+        $('div.keywords').append('<span class="popoverBox">keywords : </span>'+keywords+"<br>");
+        $("[data-toggle=popover]").popover({
+            html: true,
+            content: function() {
+                var content = $(this).attr("data-popover-content");
+                return $(content).children(".popover-body").html();
+            },
+            title: function() {
+                var title = $(this).attr("data-popover-content");
+                return $(title).children(".popover-heading").html();
+            }
+
+        }).on('shown.bs.popover', function () {
+            $popup.popover('hide');
+        });
+
+        if ($(this).prop('popShown') == undefined) {
+            $(this).prop('popShown', true).popover('show');
+        }
+        $("#a1").hide();
+    });
+
+
+    $(function() {
+        $(".homeSubmenu0").on("click", function(evt) {
+            evt.preventDefault();
+            var search = {};
+            var clicked_button = $(this);
+            search["category"] = clicked_button.attr("href");
+            fire_ajax_submit(search);
+        });
+    });
+    $(function() {
+        $(".pageSubmenu1").on("click", function(evt) {
+            evt.preventDefault();
+            var search = {};
+            var clicked_button = $(this);
+            search["category"] = clicked_button.attr("href");
+            fire_ajax_submit(search);
+        });
+    });
+    $(function() {
+        $(".pageSubmenu2").on("click", function(evt) {
+            evt.preventDefault();
+            var search = {};
+            var clicked_button = $(this);
+            search["category"] = clicked_button.attr("href");
+            fire_ajax_submit(search);
+        });
+    });
+    $(function() {
+        $(".pageSubmenu3").on("click", function(evt) {
+            evt.preventDefault();
+            var search = {};
+            var clicked_button = $(this);
+            search["category"] = clicked_button.attr("href");
+            fire_ajax_submit(search);
+        });
+    });
+
+    $(function() {
+        $(".page-link").on("click", function(evt) {
+            evt.preventDefault();
+
+            //get the number of pages to display
+            var numerOfRecords= $( "#myselect option:selected" ).text();
+
+            var index = $(this);
+            var index_value=index.attr("href");
+            var upper_limit=index_value*numerOfRecords;
+            var lower_limit=upper_limit-numerOfRecords;
+            $("table > tbody > tr").hide().slice(lower_limit, upper_limit).show();
+            //update the active
+            $('li > a').click(function() {
+                $('li').removeClass();
+                $(this).parent().addClass('page-item active');
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("select.listOdRecords").change(function(){
+            var selectedCountry = $(this).children("option:selected").val();
+            $("table > tbody > tr").hide().slice(0, selectedCountry).show();
+        });
+    });
+</script>
 
