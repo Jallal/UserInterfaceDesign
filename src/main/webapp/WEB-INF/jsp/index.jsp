@@ -34,6 +34,20 @@
 
 
 <body>
+
+<div class="container">
+    <!-- This button is used to show/hide the sidebar -->
+    <button type="button" class="sidebar-toggle pull-left visible-xs">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+    <!-- Layout -->
+    <div class="row content">
+        <div class="sidebar col-xs-12 col-sm-3 col-md-3 col-lg-3">Here the sidebar</div>
+        <div class="main col-xs-12 col-sm-9 col-md-9 col-lg-9">Here the main content</div>
+    </div>
+</div>
+
+
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
@@ -42,7 +56,7 @@
         </div>
         <ul class="list-unstyled components">
             <!--p>Dummy Heading</p-->
-            <li class="active">
+            <li>
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Term</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
@@ -79,27 +93,6 @@
                     </li>
                     <li>
                         <a href="Prioritization"  class="homeSubmenu0" >Information Sys Mgr</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Course Number</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu2">
-                    <li>
-                        <a href="Java" class="homeSubmenu0" >5715</a>
-                    </li>
-                    <li>
-                        <a href="C/C++" class="homeSubmenu0" >577</a>
-                    </li>
-                    <li>
-                        <a href="C#"  class="homeSubmenu0" >580</a>
-                    </li>
-                    <li>
-                        <a href="Python"  class="homeSubmenu0" >566</a>
-                    </li>
-                    <li>
-                        <a href="PHP"  class="homeSubmenu0" >580</a>
-                    </li>
                     </li>
                 </ul>
             </li>
@@ -169,11 +162,10 @@
 
     <!-- Page Content  -->
     <div id="content">
-
         <nav class="navbar navbar-expand-lg navbar-light text-white">
             <div class="container-fluid">
 
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <button type="button" id="sidebarCollapse" class="btn ummaize">
                     <i class="fas fa-align-left"></i>
                     <span>Categories filter</span>
                 </button>
@@ -184,6 +176,35 @@
                 <br/>
             </div>
         </nav>
+        <!-- Search section -->
+        <section class="search-sec">
+            <div class="container">
+                <form action="#" method="post" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                    <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                        <option>Select search criteria</option>
+                                        <option>Course number</option>
+                                        <option>Course name</option>
+                                        <option>professor</option>
+                                        <option>meeting time</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-sm-12 p-0">
+                                    <input type="text" id="tags" class="form-control search-slt" data-role="tagsinput"/>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                    <button type="button" name="search" class="btn btn-info search-slt2" id="search">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br/>
+            </div>
+        </section>
         <!--End of search section-->
         <div class="line"></div>
         <!-- Table start-->
@@ -356,61 +377,21 @@
         <!-- Table Graph and Pie --->
         <div class="row">
             <!-- Starting the graph-->
-            <div class="col-sm-5 col-md-6">
+            <div class="col col-lg-12">
                 <div class="table-wrapper">
                     <div class="card spur-card">
-                        <div class="centerBlock">
                             <!--graph for publications-->
                             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
                             <!--div id="chart_div" style="width: 900px; height: 500px;"></div-->
-                            <div id="columnchart_material" style="width:600px; height: 500px;"></div>
+                            <div id="columnchart_material" style="width: 1550px; height: 280px;"></div>
                             <script type="text/javascript" src="css/js/pubPerYearGraph.js"></script>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                <div class="table-wrapper">
-                    <div class="card spur-card">
-                        <div class="centerBlock">
-                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                            <div id="piechart" style="width: 600px; height: 500px;"></div>
-                            <script type="text/javascript" src="css/js/tagPie.js"></script>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="line"></div>
 
         <!-- Table Graph country per publication and Map --->
-        <div class="row">
-            <!-- Starting the graph-->
-            <div class="col-sm-5 col-md-6">
-                <div class="table-wrapper">
-                    <div class="card spur-card">
-                        <div class="centerBlock">
-                            <!--graph for publications-->
-                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                            <!--div id="chart_div" style="width: 900px; height: 500px;"></div-->
-                            <div id="regions_div_graph" style="width:600px; height: 500px;"></div>
-                            <script type="text/javascript" src="css/js/pubPerYearGraph.js"></script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                <div class="table-wrapper">
-                    <div class="card spur-card">
-                        <div class="centerBlock">
-                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                            <div id="regions_div" style="width: 600px; height: 500px;"></div>
-                            <script type="text/javascript" src="css/js/maps.js"></script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- END GRAPH AND MAP-->
     </div>
 </div>
@@ -466,108 +447,35 @@
             cache: false,
             timeout: 600000,
             success: function (data) {
-
-
                 $('#total_records').text(data.length);
                 var html = '';
                 if (data.length > 0) {
 
                     for (var count = 0; count < data.length; count++) {
-                        var RefactoringLifeCycle = "";
-                        var TargetOfRefactoring = "";
-                        var ProgrammingLanguages = "";
-                        var RefactoringEvaluation = "";
-                        var RefactoringObjectives = "";
-                        var Fields="";
-                        var AppliedParadigm="";
 
-                        var tags = JSON.stringify(data[count].listOfTages);
-                        var obj = JSON.parse(tags);
-                        var refLife1 = obj.RefactoringLifeCycle;
-                        var refLife2 = refLife1.join(",");
-                        if (refLife2) {
-                            RefactoringLifeCycle = "Refactoring Life Cycle ::: " + refLife2;
-                        }
-
-                        var targetRef1 = obj.TargetOfRefactoring;
-                        var targetRef2 = targetRef1.join(",");
-                        if (targetRef2) {
-                            TargetOfRefactoring = "Target Of Refactoring ::: " + targetRef2;
-                        }
-
-                        var progLang1 = obj.ProgrammingLanguages;
-                        var progLang2 = progLang1.join(",");
-                        if (progLang2) {
-                            ProgrammingLanguages = "Programming Languages ::: " + progLang2;
-                        }
-
-                        var progEvolu1 = obj.RefactoringEvaluation;
-                        var progEvolu2 = progEvolu1.join(",");
-                        if (progEvolu2) {
-                            RefactoringEvaluation = "RefactoringEvaluation ::: " + progEvolu2;
-                        }
-                        var progobject1 = obj.RefactoringObjectives;
-                        var progobject2 = progobject1.join(",");
-                        if (progobject2) {
-                            RefactoringObjectives = "RefactoringObjectives ::: " + progobject2;
-                        }
-
-                        var fields1 = obj.Fields;
-                        var fields2 = fields1.join(",");
-                        if (fields2) {
-                            Fields = "Fields ::: " + fields2;
-                        }
-
-                        var appliedpa1 = obj.AppliedParadigm;
-                        var appliedpa2 = appliedpa1.join(",");
-                        if (appliedpa2) {
-                            AppliedParadigm = "AppliedParadigm ::: " + appliedpa2;
-                        }
-
-
-                        var abstractVal = count + 1;
                         html += '<tr>';
-                        // html += '<td><button class="btn btn-danger btn-xs" id="SaveChangesBtn" type="button" data-toggle="popover" data-title="Custom Title" data-trigger="manual" data-content="&lt;div&gt;This is your div content&lt;/div&gt;"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>'+abstractVal+'</button></td>';
-                        html += '<td>' + '<a href="' + data[count].bbstract + '" data-title="' + data[count].title + '"  id="' + refLife2 + " " + targetRef2 + " " + progEvolu2 + " " + progobject2 + " "+progLang2+" "+fields2+ " "+appliedpa2+'"  lang="'+data[count].authors+'" type="button" class="popoverButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="popoverNumber">' + abstractVal + '<span></a></td>';
-                        html += '<td>' + data[count].authors + '</td>';
+                        html += '<td>' + data[count].courseNumber + '</td>';
                         html += '<td>' + data[count].title + '</td>';
-                        html += '<td>' + data[count].year + '</td>';
-                        html += '<td id="a" >' +
-                            '<span class="hideKeyWords text-nowrap text-info text-nowrap">' + refLife2 + '&nbsp;<br></span>' +
-                            '<span class="hideKeyWords1 text-nowrap text-warning text-nowrap">' + targetRef2 + '&nbsp;<br></span>' +
-                            '<span class="hideKeyWords2 text-nowrap text-primary text-nowrap">'+progEvolu2+'&nbsp;<br></span>' +
-                            '<span class="hideKeyWords3 text-nowrap text-success text-nowrap">'+progobject2+'&nbsp;<br></span>' +
-                            '<span class="hideKeyWords4 text-nowrap text-danger text-nowrap">' + progLang2 + '&nbsp;<br></span>' +
-                            '<span class="hideKeyWords4 text-nowrap text-secondary text-nowrap">' + fields2 + '&nbsp;<br></span>' +
-                            '<span class="hideKeyWords4 text-nowrap text-dark text-nowrap">' + appliedpa2 + '&nbsp;</span>' +
-                            '</td></tr>';
+                        html += '<td>' + data[count].description + '</td>';
+                        html += '<td>' + data[count].professor + '</td>';
+                        html += '<td>' + data[count].time + '</td>';
+                        html += '<td>' + data[count].aSeats + '</td>';
+                        html += '<td><button class="btn btn-info">Add Course</button></td>';
 
                     }
 
                     jQuery.getScript("css/js/pubPerYearGraph.js").done(function () {
                         console.log("yay, all good, do something *");
-                        drawBarChart(data[0].publicationsPerYear);
+                        //drawBarChart(data[0].publicationsPerYear);
+                        drawBarChart()
                     }).fail(function () {
                         console.log("boo first chart failed , fall back to something else");
                     });
 
                     jQuery.getScript("css/js/tagPie.js").done(function () {
                         console.log("yay, all good, do something *");
-                        drawPieChart(data[0].publicationsPerCategory);
-                    }).fail(function () {
-                        console.log("boo first chart failed , fall back to something else");
-                    });
-
-                    jQuery.getScript("css/js/maps.js").done(function () {
-                        console.log("yay, we got the map *");
-                        drawRegionsMap(data[0].publicationsMaps);
-                    }).fail(function () {
-                        console.log("boo first chart failed , fall back to something else");
-                    });
-
-                    jQuery.getScript("css/js/countryPerPublication.js").done(function () {
-                        console.log("yay, we got the country per pub *");
-                        drawPublicationPerCountryChart(data[0].publicationsMaps);
+                        //drawPieChart(data[0].publicationsPerCategory);
+                        drawPieChart();
                     }).fail(function () {
                         console.log("boo first chart failed , fall back to something else");
                     });
