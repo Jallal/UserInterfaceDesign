@@ -57,6 +57,26 @@
         <ul class="list-unstyled components">
             <!--p>Dummy Heading</p-->
             <li>
+                <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Search by degree</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu4">
+                    <li>
+                        <a href="code" class="homeSubmenu0" >Indus & Manifac Sys ENg</a>
+                    </li>
+                    <li>
+                        <a href="Architecture" class="homeSubmenu0" >Information Sys Engineering</a>
+                    </li>
+                    <li>
+                        <a href="UI"  class="homeSubmenu0" >Information Sys Management</a>
+                    </li>
+                    <li>
+                        <a href="Model"  class="homeSubmenu0" >Humanities</a>
+                    </li>
+                    <li>
+                        <a href="Database"  class="homeSubmenu0" >Human-centered Design & Eng</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Term</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
