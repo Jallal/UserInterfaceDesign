@@ -241,10 +241,12 @@
                     <th>Course Number</th>
                     <th>Title</th>
                     <th>Subject Description</th>
+                    <th>Subject</th>
+                    <th>Term</th>
                     <th>Professor</th>
                     <th>Meeting Time</th>
                     <th>Available seats</th>
-                    <th>Add/Remove</th>
+                    <th>Add/Drop</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -378,15 +380,17 @@
         <div class="row">
             <!-- Starting the graph-->
             <div class="col col-lg-12">
+                <h2 class="text-center">Running Schedule</h2>
+                <button class="btn float-right btn-info">Confirm Schedule</button>
                 <div class="table-wrapper">
                     <div class="card spur-card">
-                            <!--graph for publications-->
-                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                            <!--div id="chart_div" style="width: 900px; height: 500px;"></div-->
-                            <div id="columnchart_material" style="width: 1550px; height: 280px;"></div>
-                            <script type="text/javascript" src="css/js/pubPerYearGraph.js"></script>
+                        <!--graph for publications-->
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <div id="columnchart_material" style="width: 1550px; height: 280px;">
                         </div>
+                        <script type="text/javascript" src="css/js/pubPerYearGraph.js"></script>
                     </div>
+                </div>
             </div>
         </div>
         <div class="line"></div>
@@ -397,11 +401,11 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
     });
+  });
 </script>
 </body>
 
@@ -419,231 +423,217 @@
 
 
 <script>
-    $(document).ready(function () {
-        console.log("********************************");
+  $(document).ready(function () {
+    console.log("********************************");
 
-        $("#search").submit(function (event) {
+    $("#search").submit(function (event) {
 
 //stop submit the form, we will post it manually.
-            event.preventDefault();
+      event.preventDefault();
 
-            fire_ajax_submit();
-
-        });
+      fire_ajax_submit();
 
     });
 
-    function fire_ajax_submit(search) {
+  });
 
-        $("#btn-search").prop("disabled", true);
-        console.log("***********************************");
-        console.log("Begore AJAX"+search);
-        jQuery.ajax({
-            type: "POST",
-            contentType: "application/json",
-            url: "/api/search",
-            data: JSON.stringify(search),
-            dataType: 'json',
-            cache: false,
-            timeout: 600000,
-            success: function (data) {
-                $('#total_records').text(data.length);
-                var html = '';
-                if (data.length > 0) {
+  function fire_ajax_submit(search) {
 
-                    for (var count = 0; count < data.length; count++) {
+    $("#btn-search").prop("disabled", true);
+    jQuery.ajax({
+      type: "POST",
+      contentType: "application/json",
+      url: "/api/search",
+      data: JSON.stringify(search),
+      dataType: 'json',
+      cache: false,
+      timeout: 600000,
+      success: function (data) {
+        $('#total_records').text(data.length);
+        var html = '';
+        if (data.length > 0) {
 
-                        html += '<tr>';
-                        html += '<td>' + data[count].courseNumber + '</td>';
-                        html += '<td>' + data[count].title + '</td>';
-                        html += '<td>' + data[count].description + '</td>';
-                        html += '<td>' + data[count].professor + '</td>';
-                        html += '<td>' + data[count].time + '</td>';
-                        html += '<td>' + data[count].aSeats + '</td>';
-                        html += '<td><button class="btn btn-info">Add Course</button></td>';
 
-                    }
 
-                    jQuery.getScript("css/js/pubPerYearGraph.js").done(function () {
-                        console.log("yay, all good, do something *");
-                        //drawBarChart(data[0].publicationsPerYear);
-                        drawBarChart()
-                    }).fail(function () {
-                        console.log("boo first chart failed , fall back to something else");
-                    });
+          for (var count = 0; count < data.length; count++) {
 
-                    jQuery.getScript("css/js/tagPie.js").done(function () {
-                        console.log("yay, all good, do something *");
-                        //drawPieChart(data[0].publicationsPerCategory);
-                        drawPieChart();
-                    }).fail(function () {
-                        console.log("boo first chart failed , fall back to something else");
-                    });
-
-                } else {
-                    html = '<tr><td colspan="5">No Data Found</td></tr>';
-                }
-                $('tbody').html(html);
-
-                //will clear all the empty DIVs with the following classes
-                (function ($) {
-                    $(document).ready(function(){
-                        console.log( 'Before: ', $('div') );
-                        $('.hideKeyWords, .hideKeyWords1, .hideKeyWords2, .hideKeyWords3,.hideKeyWords4').filter(function() {
-                            return $.trim($(this).text()) === '';
-                        }).remove();
-                        console.log( 'After: %%%%%%%%%%%%%%%%%', $('div') );
-                    });
-                })(jQuery);
-
-                //get the number of pages to display
-                var numerOfRecords = $( "#myselect option:selected" ).text();
-                //show only certain number
-                $("table > tbody > tr").hide().slice(0, numerOfRecords).show();
-            },
-            error: function (e) {
-
-                var json = "<h4>Ajax Response</h4><pre>"
-                    + e.responseText + "</pre>";
-                $('#feedback').html(json);
-
-                console.log("ERROR : ", e);
-                $("#btn-search").prop("disabled", false);
-
+            html += '<tr>';
+            html += '<td>' + '<a href="' + data[count].description + '" data-title="' + data[count].title + '"  id="hello"  lang="'+data[count].fulldetails+'"  class="popoverButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="popoverNumber">' + data[count].courseNumber + '<span></a></td>';
+            html += '<td>' + data[count].title + '</td>';
+            html += '<td>' + data[count].description + '</td>';
+            html += '<td>' + data[count].subject + '</td>';
+            html += '<td>' + data[count].term + '</td>';
+            html += '<td>' + data[count].professor + '</td>';
+            html += '<td>' + data[count].time + '</td>';
+            html += '<td>' + data[count].aSeats + '</td>';
+            if (data[count].isadded==="false") {
+              html += '<td><button class="btn btn-info">Add Course</button></td>';
+            }if (data[count].isadded==="true") {
+              html += '<td><button class="btn btn-warning">Drop Course</button></td>';
             }
-        });
+          }
 
-    }
+          jQuery.getScript("css/js/pubPerYearGraph.js").done(function () {
+            console.log("yay, all good, do something *");
+            //drawBarChart(data[0].publicationsPerYear);
+            drawBarChart()
+          }).fail(function () {
+            console.log("boo first chart failed , fall back to something else");
+          });
 
-    $('#search').click(function () {
-        var search = {};
-        search["search"] = $("#exampleFormControlSelect1").val();
-        search["authorName"] = $('#tags').val();
-        fire_ajax_submit(search);
-    });
+          jQuery.getScript("css/js/tagPie.js").done(function () {
+            console.log("yay, all good, do something *");
+            //drawPieChart(data[0].publicationsPerCategory);
+            drawPieChart();
+          }).fail(function () {
+            console.log("boo first chart failed , fall back to something else");
+          });
 
-    //test
-
-    $(document).on("click", '.popoverButton', function(evt){
-
-        evt.preventDefault();
-        /*
-        * <div class="hidden" id="a1">
-          <div class="popover-heading" id="title">
-              This is the heading for #1
-          </div>
-
-          <div class="popover-body">
-              <div id="abstract">This is the body for #1</div>
-              <div class="text-danger" id="keywords">This is the heading for #2</div>
-          </div>
-      </div>
-        * */
-        //.empty()alert("Hello");
-
-        //var clicked_button = $(this);
-        //var abstract = clicked_button.attr("href");
-        //var title = clicked_button.attr("data-title");
-//'<button class="btn btn-success cancel pull-right">Close</button>'
-        $('div.popover-heading').empty();
-        $('div.abstract').empty();
-        $('div.keywords').empty();
-        $('div.popover-heading').append('<span class="close pull-right" data-dismiss="popover-x">&times;</span>');
-        $('div.popover-heading').append('<h6> <span class="popoverBox">Title : </span>'+$(this).attr("data-title")+"<h6>");
-        $('div.abstract').append('<span class="popoverBox">Abstract : </span>'+$(this).attr("href"));
-
-        //add space
-        $('div.abstract').append("</p>");
-        //authors
-        var authors = $(this).attr("lang");
-        $('div.abstract').append('<span class="popoverBox">Authors : </span>'+authors);
-
-        //keywords
-        var keywords = $(this).attr("id");
-        $('div.keywords').append('<span class="popoverBox">keywords : </span>'+keywords+"<br>");
-        $("[data-toggle=popover]").popover({
-            html: true,
-            content: function() {
-                var content = $(this).attr("data-popover-content");
-                return $(content).children(".popover-body").html();
-            },
-            title: function() {
-                var title = $(this).attr("data-popover-content");
-                return $(title).children(".popover-heading").html();
-            }
-
-        }).on('shown.bs.popover', function () {
-            $popup.popover('hide');
-        });
-
-        if ($(this).prop('popShown') == undefined) {
-            $(this).prop('popShown', true).popover('show');
+        } else {
+          html = '<tr><td colspan="5">No Data Found</td></tr>';
         }
-        $("#a1").hide();
+        $('tbody').html(html);
+
+        //will clear all the empty DIVs with the following classes
+        (function ($) {
+          $(document).ready(function(){
+            console.log( 'Before: ', $('div') );
+            $('.hideKeyWords, .hideKeyWords1, .hideKeyWords2, .hideKeyWords3,.hideKeyWords4').filter(function() {
+              return $.trim($(this).text()) === '';
+            }).remove();
+            console.log( 'After: %%%%%%%%%%%%%%%%%', $('div') );
+          });
+        })(jQuery);
+
+        //get the number of pages to display
+        var numerOfRecords = $( "#myselect option:selected" ).text();
+        //show only certain number
+        $("table > tbody > tr").hide().slice(0, numerOfRecords).show();
+      },
+      error: function (e) {
+
+        var json = "<h4>Ajax Response</h4><pre>"
+          + e.responseText + "</pre>";
+        $('#feedback').html(json);
+
+        console.log("ERROR : ", e);
+        $("#btn-search").prop("disabled", false);
+
+      }
     });
 
+  }
 
-    $(function() {
-        $(".homeSubmenu0").on("click", function(evt) {
-            evt.preventDefault();
-            var search = {};
-            var clicked_button = $(this);
-            search["category"] = clicked_button.attr("href");
-            fire_ajax_submit(search);
-        });
-    });
-    $(function() {
-        $(".pageSubmenu1").on("click", function(evt) {
-            evt.preventDefault();
-            var search = {};
-            var clicked_button = $(this);
-            search["category"] = clicked_button.attr("href");
-            fire_ajax_submit(search);
-        });
-    });
-    $(function() {
-        $(".pageSubmenu2").on("click", function(evt) {
-            evt.preventDefault();
-            var search = {};
-            var clicked_button = $(this);
-            search["category"] = clicked_button.attr("href");
-            fire_ajax_submit(search);
-        });
-    });
-    $(function() {
-        $(".pageSubmenu3").on("click", function(evt) {
-            evt.preventDefault();
-            var search = {};
-            var clicked_button = $(this);
-            search["category"] = clicked_button.attr("href");
-            fire_ajax_submit(search);
-        });
+  $('#search').click(function () {
+    var search = {};
+    search["search"] = $("#exampleFormControlSelect1").val();
+    search["authorName"] = $('#tags').val();
+    fire_ajax_submit(search);
+  });
+
+  //test
+
+  $(document).on("click", '.popoverButton', function(evt){
+
+    evt.preventDefault();
+    $('div.popover-heading').empty();
+    $('div.abstract').empty();
+    $('div.keywords').empty();
+    $('div.popover-heading').append('<span class="close pull-right" data-dismiss="popover-x">&times;</span>');
+    $('div.popover-heading').append('<h6> <span class="popoverBox">Course Title : </span>'+$(this).attr("data-title")+"<h6>")
+    $('div.abstract').append('<span class="popoverBox">Subject : </span>'+$(this).attr("href"));
+
+    //add space
+    $('div.abstract').append("</p>");
+    //authors
+    var authors = $(this).attr("lang");
+    $('div.abstract').append(authors+"<br>");
+
+    //keywords
+    var keywords = $(this).attr("id");
+    $('div.keywords').append('<span class="popoverBox"><span><button class="btn btn-info">More info</button><button class="btn float-right btn-warning">Add to selected courses</button></span></span>');
+    $("[data-toggle=popover]").popover({
+      html: true,
+      content: function() {
+        var content = $(this).attr("data-popover-content");
+        return $(content).children(".popover-body").html();
+      },
+      title: function() {
+        var title = $(this).attr("data-popover-content");
+        return $(title).children(".popover-heading").html();
+      }
+
+    }).on('shown.bs.popover', function () {
+      $popup.popover('hide');
     });
 
-    $(function() {
-        $(".page-link").on("click", function(evt) {
-            evt.preventDefault();
+    if ($(this).prop('popShown') == undefined) {
+      $(this).prop('popShown', true).popover('show');
+    }
+    $("#a1").hide();
+  });
 
-            //get the number of pages to display
-            var numerOfRecords= $( "#myselect option:selected" ).text();
 
-            var index = $(this);
-            var index_value=index.attr("href");
-            var upper_limit=index_value*numerOfRecords;
-            var lower_limit=upper_limit-numerOfRecords;
-            $("table > tbody > tr").hide().slice(lower_limit, upper_limit).show();
-            //update the active
-            $('li > a').click(function() {
-                $('li').removeClass();
-                $(this).parent().addClass('page-item active');
-            });
-        });
+  $(function() {
+    $(".homeSubmenu0").on("click", function(evt) {
+      evt.preventDefault();
+      var search = {};
+      var clicked_button = $(this);
+      search["category"] = clicked_button.attr("href");
+      fire_ajax_submit(search);
     });
-    $(document).ready(function(){
-        $("select.listOdRecords").change(function(){
-            var selectedCountry = $(this).children("option:selected").val();
-            $("table > tbody > tr").hide().slice(0, selectedCountry).show();
-        });
+  });
+  $(function() {
+    $(".pageSubmenu1").on("click", function(evt) {
+      evt.preventDefault();
+      var search = {};
+      var clicked_button = $(this);
+      search["category"] = clicked_button.attr("href");
+      fire_ajax_submit(search);
     });
+  });
+  $(function() {
+    $(".pageSubmenu2").on("click", function(evt) {
+      evt.preventDefault();
+      var search = {};
+      var clicked_button = $(this);
+      search["category"] = clicked_button.attr("href");
+      fire_ajax_submit(search);
+    });
+  });
+  $(function() {
+    $(".pageSubmenu3").on("click", function(evt) {
+      evt.preventDefault();
+      var search = {};
+      var clicked_button = $(this);
+      search["category"] = clicked_button.attr("href");
+      fire_ajax_submit(search);
+    });
+  });
+
+  $(function() {
+    $(".page-link").on("click", function(evt) {
+      evt.preventDefault();
+
+      //get the number of pages to display
+      var numerOfRecords= $( "#myselect option:selected" ).text();
+
+      var index = $(this);
+      var index_value=index.attr("href");
+      var upper_limit=index_value*numerOfRecords;
+      var lower_limit=upper_limit-numerOfRecords;
+      $("table > tbody > tr").hide().slice(lower_limit, upper_limit).show();
+      //update the active
+      $('li > a').click(function() {
+        $('li').removeClass();
+        $(this).parent().addClass('page-item active');
+      });
+    });
+  });
+  $(document).ready(function(){
+    $("select.listOdRecords").change(function(){
+      var selectedCountry = $(this).children("option:selected").val();
+      $("table > tbody > tr").hide().slice(0, selectedCountry).show();
+    });
+  });
 </script>
-

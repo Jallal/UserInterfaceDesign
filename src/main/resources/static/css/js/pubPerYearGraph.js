@@ -21,7 +21,8 @@ function drawBarChart() {
      // value[i][1]= parseInt(value[i][1], 10);
    // }
 
-
+  var container =  document.getElementById('columnchart_material');
+  var chart = new google.visualization.Timeline(container);
   var data = new google.visualization.DataTable();
   data.addColumn({ type: 'string', id: 'Room' });
   data.addColumn({ type: 'string', id: 'Name' });
@@ -39,11 +40,10 @@ function drawBarChart() {
   ]);
 
   var options = {
-    timeline: { colorByRowLabel: true }
+    title: 'My Daily Activities',
+    is3D: true,
+    legend: 'legend is here',
+    timeline: {colorByRowLabel: true}
   };
-
-    var container =  document.getElementById('columnchart_material');
-    var chart = new google.visualization.Timeline(container);
   chart.draw(data, options);
-  //}
 }
