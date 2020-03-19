@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class HelloController {
@@ -27,8 +28,37 @@ public class HelloController {
         this.data = this.readTheDataFromVCS("coursesList.csv");
         return "index";
     }
+    @RequestMapping("/account")
+    public String sudentAccount() throws IOException {
+        this.data = this.readTheDataFromVCS("coursesList.csv");
+        return "account";
+    }
+
+    @RequestMapping("/payment")
+    public String sudentAccountPayment() throws IOException {
+        this.data = this.readTheDataFromVCS("coursesList.csv");
+        return "payment";
+    }
+
+    @RequestMapping("/refund")
+    public String sudentAccountRefund() throws IOException {
+        this.data = this.readTheDataFromVCS("coursesList.csv");
+        return "refund";
+    }
 
 
+
+
+
+
+    public List<PublisherInfo> searchByDegree(List<PublisherInfo> data, String filter) {
+
+        return data.stream().filter(e -> e != null).filter(i -> i.subject.toLowerCase().contains(filter.toLowerCase())).collect(Collectors.toList());
+    }
+    public List<PublisherInfo> searchByTerm(List<PublisherInfo> data, String filter) {
+
+        return data.stream().filter(e -> e != null).filter(i -> i.getTerm().toLowerCase().contains(filter.toLowerCase())).collect(Collectors.toList());
+    }
 
 
     @PostMapping("/api/search")
@@ -36,6 +66,14 @@ public class HelloController {
         System.out.print("******************************************************\n");
         System.out.print(search.toString());
         System.out.print("******************************************************\n");
+
+        /*if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("degree")){
+            this.data= this.searchByDegree(this.data,search.getCategory());
+
+        }else if(null!=search.getAuthorName()){
+            this.data= this.searchByTerm(this.data,search.getCategory());
+        }*/
+
         com.example.springboot.AjaxResponseBody result = new com.example.springboot.AjaxResponseBody();
         result.setMsg("success");
         result.setResult(data);

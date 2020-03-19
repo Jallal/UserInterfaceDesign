@@ -60,7 +60,7 @@
                 <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Search by degree</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu4">
                     <li>
-                        <a href="code" class="homeSubmenu0" >Indus & Manifac Sys ENg</a>
+                        <a href="degree" class="homeSubmenu0" >Indus & Manifac Sys ENg</a>
                     </li>
                     <li>
                         <a href="Architecture" class="homeSubmenu0" >Information Sys Engineering</a>
@@ -80,19 +80,19 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Term</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="code" class="homeSubmenu0" >Summer 2020</a>
+                        <a href="summer 2020" class="homeSubmenu0" >Summer 2020</a>
                     </li>
                     <li>
-                        <a href="Architecture" class="homeSubmenu0" >Winter 2020</a>
+                        <a href="winter 2020" class="homeSubmenu0" >Winter 2020</a>
                     </li>
                     <li>
-                        <a href="UI"  class="homeSubmenu0" >Fall 2020</a>
+                        <a href="fall 2020"  class="homeSubmenu0" >Fall 2020</a>
                     </li>
                     <li>
-                        <a href="Model"  class="homeSubmenu0" >Summer 2019</a>
+                        <a href="summer 2019"  class="homeSubmenu0" >Summer 2019</a>
                     </li>
                     <li>
-                        <a href="Database"  class="homeSubmenu0" >Winter 2019</a>
+                        <a href="winter 2019"  class="homeSubmenu0" >Winter 2019</a>
                     </li>
                 </ul>
             </li>
