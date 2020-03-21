@@ -24,7 +24,7 @@ public class HelloController {
     public List<com.example.springboot.PublisherInfo> data = new ArrayList<>();
 
     @RequestMapping("/index")
-    public String loginMessage() throws IOException {
+    public String  loginMessage() throws Exception {
         this.data = this.readTheDataFromVCS("coursesList.csv");
         return "index";
     }
@@ -63,21 +63,30 @@ public class HelloController {
 
     @PostMapping("/api/search")
     public ResponseEntity<?> getSearchResultViaAjax(@Valid @RequestBody com.example.springboot.SearchCriteria search, Errors errors) throws Exception {
-        System.out.print("******************************************************\n");
-        System.out.print(search.toString());
-        System.out.print("******************************************************\n");
-
-        /*if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("degree")){
-            this.data= this.searchByDegree(this.data,search.getCategory());
-
-        }else if(null!=search.getAuthorName()){
-            this.data= this.searchByTerm(this.data,search.getCategory());
-        }*/
+       System.out.print("***********************TOP MESSAGES*******************************\n");
+       System.out.print(search.toString());
+       System.out.print("******************************************************\n");
+        this.data = this.readTheDataFromVCS("coursesList.csv");
+        if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Engineering")){
+            this.data= this.searchByDegree(this.data,"Information Sys Engineering");
+        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Management")){
+            this.data= this.searchByDegree(this.data,"Information Sys Management");
+        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Human-centered Design & Eng")){
+            this.data= this.searchByDegree(this.data,"Human-centered Design & Eng");
+        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Humanities")){
+            this.data= this.searchByDegree(this.data,"Humanities");
+        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Indus & Manifac Sys ENg")){
+            this.data= this.searchByDegree(this.data,"Indus & Manifac Sys ENg");
+        } else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("fall 2020")){
+            this.data= this.searchByTerm(this.data,"fall 2020");
+        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("winter 2020")){
+            this.data= this.searchByTerm(this.data,"winter 2020");
+        }
 
         com.example.springboot.AjaxResponseBody result = new com.example.springboot.AjaxResponseBody();
         result.setMsg("success");
-        result.setResult(data);
-        return ResponseEntity.ok(data);
+        result.setResult(this.data);
+        return ResponseEntity.ok(this.data);
     }
 
     public List<com.example.springboot.PublisherInfo> readTheDataFromVCS(String csvFile) throws IOException {

@@ -34,20 +34,6 @@
 
 
 <body>
-
-<div class="container">
-    <!-- This button is used to show/hide the sidebar -->
-    <button type="button" class="sidebar-toggle pull-left visible-xs">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-    </button>
-    <!-- Layout -->
-    <div class="row content">
-        <div class="sidebar col-xs-12 col-sm-3 col-md-3 col-lg-3">Here the sidebar</div>
-        <div class="main col-xs-12 col-sm-9 col-md-9 col-lg-9">Here the main content</div>
-    </div>
-</div>
-
-
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
@@ -60,19 +46,19 @@
                 <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Search by degree</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu4">
                     <li>
-                        <a href="degree" class="homeSubmenu0" >Indus & Manifac Sys ENg</a>
+                        <a href="Indus & Manifac Sys ENg" class="homeSubmenu0" >Indus & Manifac Sys ENg</a>
                     </li>
                     <li>
-                        <a href="Architecture" class="homeSubmenu0" >Information Sys Engineering</a>
+                        <a href="Information Sys Engineering" class="homeSubmenu0" >Information Sys Engineering</a>
                     </li>
                     <li>
-                        <a href="UI"  class="homeSubmenu0" >Information Sys Management</a>
+                        <a href="Information Sys Management"  class="homeSubmenu0" >Information Sys Management</a>
                     </li>
                     <li>
-                        <a href="Model"  class="homeSubmenu0" >Humanities</a>
+                        <a href="Humanities"  class="homeSubmenu0" >Humanities</a>
                     </li>
                     <li>
-                        <a href="Database"  class="homeSubmenu0" >Human-centered Design & Eng</a>
+                        <a href="Human-centered Design & Eng"  class="homeSubmenu0" >Human-centered Design & Eng</a>
                     </li>
                 </ul>
             </li>

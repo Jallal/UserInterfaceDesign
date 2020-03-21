@@ -32,10 +32,10 @@
 <nav class="navbar navbar-expand-lg navbar-light text-white">
     <div class="container-fluid">
 
-        <button type="button" id="sidebarCollapse" class="btn ummaize">
+        <a href="index" type="button" id="" class="btn ummaize">
             <i class="fas fa-align-left"></i>
             <span></span>
-        </button>
+        </a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
@@ -52,7 +52,7 @@
     <div class="card-columns text-white text-center">
         <div class="card mt-2 mb-3 text-white text-center bg-primary">
             <div class="card-body">
-                <h5 class="card-title text-center font-weight-bold">Account Self-Service</h5>
+                <a href="index" class="card-title text-center font-weight-bold">Account Self-Service</a>
                 <p class="text-white text-center">Student Accounts Self-Service is the place to manage your student account activity 24/7 at your convenience</p>
             </div>
         </div>
@@ -67,7 +67,7 @@
         </div>
         <div class="card text-center text-white mb-3 pink  bg-success">
             <div class="card-body">
-                <h5 class="card-title font-weight-bold">Pay Enrollment Deposit</h5>
+                <a href="payment" class="card-title font-weight-bold">Pay Enrollment Deposit</a>
                 <p class="text-white text-center">Pay your enrollment deposits via e-pay</p>
             </div>
         </div>
@@ -77,7 +77,7 @@
         </div>
         <div class="card mb-3 text-center bg-info">
             <div class="card-body">
-                <h5 class="card-title font-weight-bold">Request a Refund</h5>
+                <a href="refund"  class="card-title font-weight-bold">Request a Refund</a>
                 <p class="text-white text-center">This form is to request the Student Accounts Refunds Team to review an overall credit on a student account for refund eligibility</p>
             </div>
         </div>
