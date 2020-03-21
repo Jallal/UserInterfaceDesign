@@ -81,6 +81,8 @@ public class HelloController {
             this.data= this.searchByTerm(this.data,"fall 2020");
         }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("winter 2020")){
             this.data= this.searchByTerm(this.data,"winter 2020");
+        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("summer 2020")){
+            this.data= this.searchByTerm(this.data,"summer 2020");
         }
 
         com.example.springboot.AjaxResponseBody result = new com.example.springboot.AjaxResponseBody();
