@@ -85,21 +85,21 @@ public class HelloController {
        System.out.print(search.toString());
        System.out.print("******************************************************\n");
         this.data = this.readTheDataFromVCS("static/css/coursesList.csv");
-        if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Engineering")){
+        if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Engineering")){
             this.data= this.searchByDegree(this.data,"Information Sys Engineering");
-        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Management")){
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Management")){
             this.data= this.searchByDegree(this.data,"Information Sys Management");
-        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Human-centered Design & Eng")){
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Human-centered Design & Eng")){
             this.data= this.searchByDegree(this.data,"Human-centered Design & Eng");
-        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Humanities")){
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Humanities")){
             this.data= this.searchByDegree(this.data,"Humanities");
-        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Indus & Manifac Sys ENg")){
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Indus & Manifac Sys ENg")){
             this.data= this.searchByDegree(this.data,"Indus & Manifac Sys ENg");
-        } else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("fall 2020")){
+        } else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("fall 2020")){
             this.data= this.searchByTerm(this.data,"fall 2020");
-        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("winter 2020")){
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("winter 2020")){
             this.data= this.searchByTerm(this.data,"winter 2020");
-        }else if(null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("summer 2020")){
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("summer 2020")){
             this.data= this.searchByTerm(this.data,"summer 2020");
         }else if(search!=null &&search.getSearch().equalsIgnoreCase("Course number")){
             this.data= this.searchByCourseNumber(this.data,search.getAuthorName());

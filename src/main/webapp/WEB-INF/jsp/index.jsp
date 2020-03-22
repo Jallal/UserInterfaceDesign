@@ -642,4 +642,11 @@
       $("table > tbody > tr").hide().slice(0, selectedCountry).show();
     });
   });
+
+  window.onload = function () {
+
+          search["category"]="hello"
+          search["search"]="hello"
+          this.fire_ajax_submit(search);
+  }
 </script>
