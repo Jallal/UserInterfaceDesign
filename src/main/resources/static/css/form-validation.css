@@ -1,3 +1,7 @@
+.container {
+    max-width: 1200px;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #00274C;
@@ -11,8 +15,5 @@
     box-shadow: none;
     outline: none !important;
     border: none;
-}
-.container {
-    max-width: 960px;
 }
 

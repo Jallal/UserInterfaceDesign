@@ -1,13 +1,13 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Make a Payment</title>
-        <link rel="stylesheet" href="css/paymentStyle.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-        <meta name="robots" content="noindex,follow">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-    </head>
+<head>
+    <link rel="stylesheet" href="css/paymentStyle.css">
+    <meta charset="UTF-8">
+    <title>Make a Payment</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <meta name="robots" content="noindex,follow">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
     <body>
     <div class="checkout-panel">
         <div class="panel-body">
@@ -78,4 +78,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="css/paymentScript.js"></script>
 
-    </body></html>
+    </body>
+</html>
