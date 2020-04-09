@@ -87,14 +87,14 @@ public class HelloController {
         this.data = this.readTheDataFromVCS("static/css/coursesList.csv");
         if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Engineering")){
             this.data= this.searchByDegree(this.data,"Information Sys Engineering");
-        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Information Sys Management")){
-            this.data= this.searchByDegree(this.data,"Information Sys Management");
-        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Human-centered Design & Eng")){
-            this.data= this.searchByDegree(this.data,"Human-centered Design & Eng");
-        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Humanities")){
-            this.data= this.searchByDegree(this.data,"Humanities");
-        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Indus & Manifac Sys ENg")){
-            this.data= this.searchByDegree(this.data,"Indus & Manifac Sys ENg");
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Indust & Manufac Sys Engin")){
+            this.data= this.searchByDegree(this.data,"Indust & Manufac Sys Engin");
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Business Administration")){
+            this.data= this.searchByDegree(this.data,"Business Administration");
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Accounting")){
+            this.data= this.searchByDegree(this.data,"Accounting");
+        }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("Chemistry")){
+            this.data= this.searchByDegree(this.data,"Chemistry");
         } else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("fall 2020")){
             this.data= this.searchByTerm(this.data,"fall 2020");
         }else if(search!=null &&null!=search.getCategory()&&search.getCategory().equalsIgnoreCase("winter 2020")){
@@ -138,7 +138,8 @@ public class HelloController {
                     recordsString.get(6),
                     recordsString.get(7),
                     recordsString.get(8),
-                    recordsString.get(9));
+                    recordsString.get(9),
+                    recordsString.get(10));
             publishRecords.add(publisherInfo);
             values = csvReader.readNext();
         }

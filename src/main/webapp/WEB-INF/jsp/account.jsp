@@ -32,9 +32,9 @@
 <nav class="navbar navbar-expand-lg navbar-light text-white">
     <div class="container-fluid">
 
-        <a href="index" type="button" id="" class="btn ummaize">
+        <a href="account" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
-            <span></span>
+            <h6>Home</h6>
         </a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
@@ -50,36 +50,31 @@
     <h2 class="my-5 text-center h2">Student Account</h2>
 
     <div class="card-columns text-white text-center">
-        <div class="card mt-2 mb-3 text-white text-center bg-primary">
-            <div class="card-body">
-                <a href="index" class="card-title text-center font-weight-bold">Account Self-Service</a>
-                <p class="text-white text-center">Student Accounts Self-Service is the place to manage your student account activity 24/7 at your convenience</p>
-            </div>
+        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-primary">
+                <a href="index"><h5 class="card-title text-center font-weight-bold">Courses and Registration</h5></a>
+                <p class="text-white text-center">Place where to search courses and register for classes and see you current schedule</p>
         </div>
-        <div class="card p-3 mb-3 indigo text-white text-center bg-danger">
+        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-danger">
             <h5 class="card-title text-center font-weight-bold">Tax Notification</h5>
-                <p class="text-white text-center">Your Tuition Statement form 1098-T Copy B for Student </p>
+                <p class="text-white text-center">Your Tuition Statement form 1098-T Copy B for Student and related expenses </p>
         </div>
 
         <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-warning">
             <h5 class="card-title font-weight-bold">International Payment</h5>
-                <p class="text-white text-center">You do not have a balance so a payment is not an option at this time.</p>
+                <p class="text-white text-center">You do not have a balance so a payment is not an option at this time. check back later</p>
         </div>
-        <div class="card text-center text-white mb-3 pink  bg-success">
-            <div class="card-body">
-                <a href="payment" class="card-title font-weight-bold">Pay Enrollment Deposit</a>
-                <p class="text-white text-center">Pay your enrollment deposits via e-pay</p>
-            </div>
+        <div class="card blue text-white text-center p-3 mt-2 mb-3  bg-success">
+            <a href="payment"><h5 class="card-title text-center font-weight-bold">Pay Enrollment Deposit</h5></a>
+                <p class="text-white text-center">Pay your enrollment deposits and/or semester tuition via checking account and/or debit card</p>
+
         </div>
-        <div class="card p-3 text-center mt-2 mb-3 bg-dark">
+        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-dark">
             <h5 class="card-title font-weight-bold">Select Tax Year</h5>
-                <p>Your Tuition Statement form 1098-T Copy B for Student</p>
+                <p>Your Tuition Statement form 1098-T Copy B for Student and the copy that is sent to IRS</p>
         </div>
-        <div class="card mb-3 text-center bg-info">
-            <div class="card-body">
-                <a href="refund"  class="card-title font-weight-bold">Request a Refund</a>
-                <p class="text-white text-center">This form is to request the Student Accounts Refunds Team to review an overall credit on a student account for refund eligibility</p>
-            </div>
+        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-info">
+            <a href="refund"><h5 class="card-title text-center font-weight-bold">Request a Refund</h5></a>
+                <p class="text-white text-center">This form is to request the Student Accounts Refunds Team to review an overall credit on a student account</p>
         </div>
     </div>
 </div>

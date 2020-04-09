@@ -109,9 +109,10 @@ public class PublisherInfo {
 
 
 
-    public PublisherInfo(String courseNumber, String title, String description, String professor, String time, String aSeats, String subject, String term, String isadded, String fulldetails) {
+    public PublisherInfo(String courseNumber,String courseName, String title, String description, String professor, String time, String aSeats, String subject, String term, String isadded, String fulldetails) {
 
         this.courseNumber = courseNumber;
+        this.courseName=courseName;
         this.title = title;
         this.description = description;
         this.professor = professor;

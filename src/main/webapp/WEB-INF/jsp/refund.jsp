@@ -42,11 +42,10 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-light text-white">
     <div class="container-fluid">
-
-        <button type="button" id="sidebarCollapse" class="btn ummaize">
+        <a href="account" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
-            <span></span>
-        </button>
+            <h6>Home</h6>
+        </a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
@@ -120,6 +119,15 @@
                     <div class="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                     </div>
+                </div>
+
+
+                <div class="form-group"> <label>
+                    <h6>Select your Bank</h6></label>
+                    <select class="form-control" id="ccmonth">
+                        <option>Checking Account ***********1234</option>
+                        <option>Saving Account ***********5678</option>
+                    </select>
                 </div>
                 <br>
                 <br>

@@ -32,8 +32,21 @@
 
 </head>
 
-
 <body>
+<nav class="navbar navbar-expand-lg navbar-light text-white">
+    <div class="container-fluid">
+        <a href="account" type="button" id="Home" class="btn ummaize">
+            <i class="fas fa-align-left"></i>
+            <h6>Home</h6>
+        </a>
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
+        <br/>
+    </div>
+</nav>
+
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
@@ -46,19 +59,19 @@
                 <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Search by degree</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu4">
                     <li>
-                        <a href="Indus & Manifac Sys ENg" class="homeSubmenu0" >Indus & Manifac Sys ENg</a>
-                    </li>
-                    <li>
                         <a href="Information Sys Engineering" class="homeSubmenu0" >Information Sys Engineering</a>
                     </li>
                     <li>
-                        <a href="Information Sys Management"  class="homeSubmenu0" >Information Sys Management</a>
+                        <a href="Indust & Manufac Sys Engin" class="homeSubmenu0" >Indust & Manufac Sys Engin</a>
                     </li>
                     <li>
-                        <a href="Humanities"  class="homeSubmenu0" >Humanities</a>
+                        <a href="Business Administration"  class="homeSubmenu0" >Business Administration</a>
                     </li>
                     <li>
-                        <a href="Human-centered Design & Eng"  class="homeSubmenu0" >Human-centered Design & Eng</a>
+                        <a href="Accounting"  class="homeSubmenu0" >Accounting</a>
+                    </li>
+                    <li>
+                        <a href="Chemistry"  class="homeSubmenu0" >Chemistry</a>
                     </li>
                 </ul>
             </li>
@@ -168,20 +181,19 @@
 
     <!-- Page Content  -->
     <div id="content">
-        <nav class="navbar navbar-expand-lg navbar-light text-white">
+        <!--nav class="navbar navbar-expand-lg navbar-light text-white bg-white">
             <div class="container-fluid">
-
                 <button type="button" id="sidebarCollapse" class="btn ummaize">
                     <i class="fas fa-align-left"></i>
                     <span>Categories filter</span>
-                </button>
-                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                </button-->
+                <!--button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-align-justify"></i>
-                </button>
-                <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
+                </button-->
+                <!--h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
                 <br/>
             </div>
-        </nav>
+        </nav-->
         <!-- Search section -->
         <section class="search-sec">
             <div class="container">
@@ -193,9 +205,9 @@
                                     <select class="form-control search-slt" id="exampleFormControlSelect1">
                                         <option>Select search criteria</option>
                                         <option>Course number</option>
-                                        <option>Course name</option>
-                                        <option>professor</option>
-                                        <option>meeting time</option>
+                                        <option>Course Title</option>
+                                        <option>Professor</option>
+                                        <option>Meeting time</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-6 col-md-3 col-sm-12 p-0">
@@ -237,7 +249,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <h2 class="text-center">Browse Courses</h2>
+                        <h2 class="text-center">Course Search and Criteria</h2>
                     </div>
                 </div>
             </div>
@@ -387,7 +399,15 @@
             <!-- Starting the graph-->
             <div class="col col-lg-12">
                 <h2 class="text-center">Running Schedule</h2>
-                <button class="btn float-right btn-info">Confirm Schedule</button>
+                <!--button class="btn float-right btn-info">Confirm Schedule</button-->
+                <a href="Do you want to register the courses from your running schedule?" data-title="Confirm schedule"  id="hello"  lang=""  class="registerButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="col-lg-2 col-md-3 col-sm-12 p-12  btn-info">Confirm Schedule</span></a></td>
+                <div class="col-lg-2 col-md-3 col-sm-12 p-12 float-right">
+                    <select class="form-control search-slt bg-info text-white" id="selectTerm">
+                        <option>Winter 2020</option>
+                        <option>Summer 2020</option>
+                        <option>Fall 2020</option>
+                    </select>
+                </div>
                 <div class="table-wrapper">
                     <div class="card spur-card">
                         <!--graph for publications-->
@@ -464,7 +484,7 @@
           for (var count = 0; count < data.length; count++) {
 
             html += '<tr>';
-            html += '<td>' + '<a href="' + data[count].description + '" data-title="' + data[count].title + '"  id="hello"  lang="'+data[count].fulldetails+'"  class="popoverButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="popoverNumber">' + data[count].courseNumber + '<span></a></td>';
+            html += '<td>' + '<a href="' + data[count].description + '" data-title="' + data[count].title + '"  id="hello"  lang="'+data[count].fulldetails+'"  class="popoverButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="popoverNumber">' + data[count].courseNumber + '</span></a></td>';
             html += '<td>' + data[count].title + '</td>';
             html += '<td>' + data[count].description + '</td>';
             html += '<td>' + data[count].subject + '</td>';
@@ -472,7 +492,7 @@
             html += '<td>' + data[count].professor + '</td>';
             html += '<td>' + data[count].time + '</td>';
             html += '<td>' + data[count].aSeats + '</td>';
-            if (data[count].isadded==="false") {
+            if (data[count].isadded==="FALSE") {
               html += '<td><button class="btn btn-info">Add Course</button></td>';
             }if (data[count].isadded==="true") {
               html += '<td><button class="btn btn-warning">Drop Course</button></td>';
@@ -577,6 +597,47 @@
       $(this).prop('popShown', true).popover('show');
     }
     $("#a1").hide();
+  });
+
+
+  $(document).on("click", '.registerButton', function(evt){
+
+      evt.preventDefault();
+      $('div.popover-heading').empty();
+      $('div.abstract').empty();
+      $('div.keywords').empty();
+      $('div.popover-heading').append('<span class="close pull-right" data-dismiss="popover-x">&times;</span>');
+      $('div.popover-heading').append('<h6> <span class="popoverBox">'+$(this).attr("data-title")+"</span><h6>")
+      $('div.abstract').append('<span class="popoverBox"></span>'+$(this).attr("href"));
+
+      //add space
+      $('div.abstract').append("</p>");
+      //authors
+      var authors = $(this).attr("lang");
+      $('div.abstract').append(authors+"<br>");
+
+      //keywords
+      var keywords = $(this).attr("id");
+      $('div.keywords').append('<span class="popoverBox"><span><button class="btn btn-info">YES</button><button class="btn float-right btn-danger">NO</button></span></span>');
+      $("[data-toggle=popover]").popover({
+          html: true,
+          content: function() {
+              var content = $(this).attr("data-popover-content");
+              return $(content).children(".popover-body").html();
+          },
+          title: function() {
+              var title = $(this).attr("data-popover-content");
+              return $(title).children(".popover-heading").html();
+          }
+
+      }).on('shown.bs.popover', function () {
+          $popup.popover('hide');
+      });
+
+      if ($(this).prop('popShown') == undefined) {
+          $(this).prop('popShown', true).popover('show');
+      }
+      $("#a1").hide();
   });
 
 
