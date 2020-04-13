@@ -24,6 +24,17 @@ a:focus {
     transition: all 0.3s;
 }
 
+.account{
+    background: #00274C;
+}
+
+.accounts{
+    color: #00274C;
+}
+.descri{
+    color: #FFCB05;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #00274C;
@@ -307,5 +318,9 @@ table.table td i {
 
 .ummaize{
     color: #ffffff;
+    background: #FFCB05;
+}
+.hide{
+    color: #FFCB05;
     background: #FFCB05;
 }

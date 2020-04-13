@@ -34,47 +34,74 @@
 
         <a href="account" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
-            <h6>Home</h6>
+            <h6 class="accounts">Home</h6>
+            <h8 class="hide">Account&List</h8>
         </a>
+        <a href="login" type="button" id="H" class="btn"></a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
         <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
         <br/>
+        <a href="account" type="button" id="f" class="btn ummaize">
+            <i class="fas fa-align-left"></i>
+            <h5 class="accounts">Hello, Ray</h5>
+            <h8 class="accounts">Account&List</h8>
+        </a>
     </div>
 </nav>
 
+
+<!--nav class="navbar navbar-expand-lg navbar-light text-dark">
+    <div class="container-fluid">
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <a href="main" type="button" id="d" class="btn">
+            <img src="css/js/car3.jpg" alt="Italian Trulli" height="100" width="150">
+        </a>
+        <a href="main" type="button" id="h" class="btn">
+        </a>
+        <div class="col-xs-1 center-block">
+            <h1>WOLVERINE DEALERSHIP</h1>
+        </div>
+        <br/>
+        <a href="login" type="button" id="Home" class="btn ummaize">
+            <i class="fas fa-align-left"></i>
+            <h5>Hello, Jallal</h5>
+            <h8>Account&List</h8>
+        </a>
+    </div>
+</nav-->
+</head>
+
 <div class="container my-4">
     <hr class="my-5">
-
     <h2 class="my-5 text-center h2">Student Account</h2>
-
     <div class="card-columns text-white text-center">
-        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-primary">
-                <a href="index"><h5 class="card-title text-center font-weight-bold">Courses and Registration</h5></a>
+        <div class="account card blue text-white text-center p-3 mt-2 mb-3">
+                <a href="index"><h5 class="descri card-title text-center font-weight-bold">Courses and Registration</h5><img src="css/js/regi2.png" alt="Italian Trulli" height="150" width="200"></a>
                 <p class="text-white text-center">Place where to search courses and register for classes and see you current schedule</p>
         </div>
-        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-danger">
-            <h5 class="card-title text-center font-weight-bold">Tax Notification</h5>
-                <p class="text-white text-center">Your Tuition Statement form 1098-T Copy B for Student and related expenses </p>
-        </div>
-
-        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-warning">
-            <h5 class="card-title font-weight-bold">International Payment</h5>
-                <p class="text-white text-center">You do not have a balance so a payment is not an option at this time. check back later</p>
-        </div>
-        <div class="card blue text-white text-center p-3 mt-2 mb-3  bg-success">
-            <a href="payment"><h5 class="card-title text-center font-weight-bold">Pay Enrollment Deposit</h5></a>
-                <p class="text-white text-center">Pay your enrollment deposits and/or semester tuition via checking account and/or debit card</p>
+        <div class="account card blue text-white text-center p-3 mt-2 mb-3 ">
+            <a href="payment"><h5 class="descri card-title text-center font-weight-bold">Pay Enrollment Deposit</h5><img src="css/js/pay7.png" alt="Italian Trulli" height="150" width="200"></a>
+            <p class="text-white text-center">Pay your enrollment deposits and/or semester tuition via checking account and/or debit card</p>
 
         </div>
-        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-dark">
-            <h5 class="card-title font-weight-bold">Select Tax Year</h5>
-                <p>Your Tuition Statement form 1098-T Copy B for Student and the copy that is sent to IRS</p>
+        <div class="account card blue text-white text-center p-3 mt-2 mb-3 ">
+            <h5 class="descri card-title text-center font-weight-bold">Tax Notification</h5><img src="css/js/tax9.png" alt="Italian Trulli" height="150" width="200">
+            <p class="text-white text-center">Your Tuition Statement form 1098-T Copy B for Student and related expenses </p>
         </div>
-        <div class="card blue text-white text-center p-3 mt-2 mb-3 bg-info">
-            <a href="refund"><h5 class="card-title text-center font-weight-bold">Request a Refund</h5></a>
-                <p class="text-white text-center">This form is to request the Student Accounts Refunds Team to review an overall credit on a student account</p>
+        <div class="account card blue text-white text-center p-3 mt-2 mb-3 ">
+            <h5 class="descri card-title font-weight-bold">International Payment</h5><img src="css/js/inter2.png" alt="Italian Trulli" height="150" width="200">
+            <p class="text-white text-center">You do not have a balance so a payment is not an option at this time. check back later</p>
+        </div>
+        <div class="account card blue text-white text-center p-3 mt-2 mb-3">
+            <h5 class="descri card-title font-weight-bold">Select Tax Year</h5><img src="css/js/cal1.png" alt="Italian Trulli" height="150" width="200">
+            <p class="text-white text-center">Your Tuition Statement form 1098-T Copy B for Student and the copy that is sent to IRS</p>
+        </div>
+        <div class="account card blue text-white text-center p-3 mt-2 mb-3">
+            <a href="refund"><h5 class="descri card-title text-center font-weight-bold">Request a Refund</h5><img src="css/js/return.png" alt="Italian Trulli" height="150" width="200"></a>
+            <p class="text-white text-center">This form is to request the Student Accounts Refunds Team to review an overall credit on a student account</p>
         </div>
     </div>
 </div>

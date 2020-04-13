@@ -44,13 +44,20 @@
     <div class="container-fluid">
         <a href="account" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
-            <h6>Home</h6>
+            <h6 class="accounts">Home</h6>
+            <h8 class="hide">Account&List</h8>
         </a>
+        <a href="login" type="button" id="H" class="btn"></a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
         <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
         <br/>
+        <a href="account" type="button" id="d" class="btn ummaize">
+            <i class="fas fa-align-left"></i>
+            <h5 class="accounts">Hello, Ray</h5>
+            <h8 class="accounts">Account&List</h8>
+        </a>
     </div>
 </nav>
 <!-- END OF NAV BAR-->
@@ -255,18 +262,31 @@
 <i class=&quot;fas fa-credit-card mr-2&quot;></i> Credit Card </a> </li> <li class=&quot;nav-item&quot;> <a data-toggle=&quot;pill&quot; href=&quot;#paypal&quot; class=&quot;nav-link &quot;>
 <i class=&quot;fab fa-paypal mr-2&quot;></i> Paypal </a> </li> <li class=&quot;nav-item&quot;> <a data-toggle=&quot;pill&quot; href=&quot;#net-banking&quot; class=&quot;nav-link &quot;>
 <i class=&quot;fas fa-mobile-alt mr-2&quot;></i> Net Banking </a> </li> </ul> </div> <!-- End --> <!-- Credit card form content --> <div class=&quot;tab-content&quot;>
-<!-- credit card info--> <div id=&quot;credit-card&quot; class=&quot;tab-pane fade show active pt-3&quot;> <form role=&quot;form&quot;> <div class=&quot;form-group&quot;>
-<label for=&quot;username&quot;><h6>Card Owner</h6></label> <input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Card Owner Name&quot; required class=&quot;form-control &quot;>
-</div> <div class=&quot;form-group&quot;> <label for=&quot;cardNumber&quot;><h6>Card number</h6></label> <div class=&quot;input-group&quot;>
-<input type=&quot;text&quot; name=&quot;cardNumber&quot; placeholder=&quot;Valid card number&quot; class=&quot;form-control &quot; required>
-<div class=&quot;input-group-append&quot;> <span class=&quot;input-group-text text-muted&quot;> <i class=&quot;fab fa-cc-visa mx-1&quot;></i>
+
+<label for=&quot;cardNumber&quot;><h6>Enter the amount</h6></label>
+<div class=&quot;input-group&quot;>
+<input type=&quot;text&quot; name=&quot;cardNumber&quot; placeholder=&quot;Amount due : $6320.00&quot; class=&quot;form-control &quot; required>
+</input>
+</div>
+<!-- credit card info-->
+<div id=&quot;credit-card&quot; class=&quot;tab-pane fade show active pt-3&quot;> <form role=&quot;form&quot;> <div class=&quot;form-group&quot;>
+<label for=&quot;username&quot;><h6>Card Owner</h6></label>
+
+<input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Card Owner Name&quot; required class=&quot;form-control &quot;></div> <div class=&quot;form-group&quot;>
+<label for=&quot;cardNumber&quot;><h6>Card number</h6></label> <div class=&quot;input-group&quot;>
+<input type=&quot;text&quot; name=&quot;cardNumber&quot; placeholder=&quot;Valid card number&quot; class=&quot;form-control &quot; required><div class=&quot;input-group-append&quot;>
+<span class=&quot;input-group-text text-muted&quot;>
+
+<i class=&quot;fab fa-cc-visa mx-1&quot;></i>
 <i class=&quot;fab fa-cc-mastercard mx-1&quot;></i> <i class=&quot;fab fa-cc-amex mx-1&quot;></i> </span> </div> </div> </div> <div class=&quot;row&quot;>
 <div class=&quot;col-sm-8&quot;> <div class=&quot;form-group&quot;> <label><span class=&quot;hidden-xs&quot;><h6>Expiration Date</h6></span></label>
 <div class=&quot;input-group&quot;> <input type=&quot;number&quot; placeholder=&quot;MM&quot; name=&quot;&quot; class=&quot;form-control&quot; required>
 <input type=&quot;number&quot; placeholder=&quot;YY&quot; name=&quot;&quot; class=&quot;form-control&quot; required> </div> </div> </div>
 <div class=&quot;col-sm-4&quot;> <div class=&quot;form-group mb-4&quot;>
 <label data-toggle=&quot;tooltip&quot; title=&quot;Three digit CV code on the back of your card&quot;><h6>CVV <i class=&quot;fa fa-question-circle d-inline&quot;></i></h6>
-</label> <input type=&quot;text&quot; required class=&quot;form-control&quot;> </div> </div> </div> <div class=&quot;card-footer&quot;>
+</label>
+<input type=&quot;text&quot; required class=&quot;form-control&quot;> </div> </div> </div> <div class=&quot;card-footer&quot;>
+
 <button type=&quot;button&quot; class=&quot;subscribe btn btn-primary btn-block shadow-sm&quot;> Confirm Payment </button>
 </form> </div> </div> <!-- End --> <!-- Paypal info --> <div id=&quot;paypal&quot; class=&quot;tab-pane fade pt-3&quot;>
 <h6 class=&quot;pb-2&quot;>Select your paypal account type</h6> <div class=&quot;form-group &quot;> <label class=&quot;radio-inline&quot;>

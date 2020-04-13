@@ -37,13 +37,20 @@
     <div class="container-fluid">
         <a href="account" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
-            <h6>Home</h6>
+            <h6 class="accounts">Home</h6>
+            <h8 class="hide">Account&List</h8>
         </a>
+        <a href="account" type="button" id="H" class="btn"></a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
         <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
         <br/>
+        <a href="login" type="button" id="d" class="btn ummaize">
+            <i class="fas fa-align-left"></i>
+            <h5 class="accounts">Hello, Ray</h5>
+            <h8 class="accounts">Account&List</h8>
+        </a>
     </div>
 </nav>
 
@@ -398,7 +405,7 @@
         <div class="row">
             <!-- Starting the graph-->
             <div class="col col-lg-12">
-                <h2 class="text-center">Running Schedule</h2>
+                <h2 class="text-center">Current Schedule</h2>
                 <!--button class="btn float-right btn-info">Confirm Schedule</button-->
                 <a href="Do you want to register the courses from your running schedule?" data-title="Confirm schedule"  id="hello"  lang=""  class="registerButton btn btn-info" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right"><span class="col-lg-2 col-md-3 col-sm-12 p-12  btn-info">Confirm Schedule</span></a></td>
                 <div class="col-lg-2 col-md-3 col-sm-12 p-12 float-right">
