@@ -33,9 +33,7 @@
     <div class="container-fluid">
 
         <a href="account" type="button" id="Home" class="btn ummaize">
-            <i class="fas fa-align-left"></i>
-            <h6 class="accounts">Home</h6>
-            <h8 class="hide">Account&List</h8>
+            <i><img src="css/js/home.png" alt="Italian Trulli" height="90" width="110"></i>
         </a>
         <a href="login" type="button" id="H" class="btn"></a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

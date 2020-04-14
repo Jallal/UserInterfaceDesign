@@ -12,6 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!--have Ajx work -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
     <!-- needed for the collapsable table -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.css">
@@ -31,8 +35,6 @@
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script-->
 
-    <!--have Ajx work -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
@@ -43,9 +45,7 @@
 <nav class="navbar navbar-expand-lg navbar-light text-white">
     <div class="container-fluid">
         <a href="account" type="button" id="Home" class="btn ummaize">
-            <i class="fas fa-align-left"></i>
-            <h6 class="accounts">Home</h6>
-            <h8 class="hide">Account&List</h8>
+            <i><img src="css/js/home.png" alt="Italian Trulli" height="90" width="110"></i>
         </a>
         <a href="login" type="button" id="p" class="btn"></a>
 
@@ -129,6 +129,11 @@
                     </div>
                 </div>
 
+                <div class="mb-3">
+                    <label for="email">Partial refund <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="amount" placeholder="Account balance : $2300.10">
+                </div>
+
 
                 <div class="form-group"> <label>
                     <h6>Select your Bank</h6></label>
@@ -140,11 +145,12 @@
                 <br>
                 <br>
                 <br>
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Refund Request</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" data-toggle="modal" data-target="#basicModal">Submit Refund Request</button>
             </form>
         </div>
     </div>
 </div>
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -175,7 +181,48 @@
             });
         }, false);
     })();
+
+
+
+
+    $(document).on("click", '.registerButton', function(evt){
+
+    });
+
+
+
+    $('#basicModal').on('shown.bs.modal', function (e) {
+        alert('Modal is successfully shown!');
+    });
 </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/popper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<!--a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">
+    Click to open Modal
+</a-->
+<!-- large modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Refund Confirmation </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>Are you sure you want to proceed?</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body></html>

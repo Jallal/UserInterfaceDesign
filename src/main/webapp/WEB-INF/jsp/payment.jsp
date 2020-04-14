@@ -43,15 +43,13 @@
 <nav class="navbar navbar-expand-lg navbar-light text-white">
     <div class="container-fluid">
         <a href="account" type="button" id="Home" class="btn ummaize">
-            <i class="fas fa-align-left"></i>
-            <h6 class="accounts">Home</h6>
-            <h8 class="hide">Account&List</h8>
+            <i><img src="css/js/home.png" alt="Italian Trulli" height="90" width="110"></i>
         </a>
         <a href="login" type="button" id="H" class="btn"></a>
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
-        <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
+        <h1><img src="css/js/um.png" alt="Italian Trulli" height="129" width="85">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
         <br/>
         <a href="account" type="button" id="d" class="btn ummaize">
             <i class="fas fa-align-left"></i>
